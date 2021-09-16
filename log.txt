@@ -1,0 +1,9 @@
+DEBUG: __main__:2020-08-13 22:26:57,334 - This is DEBUG message from log1 	log.py
+INFO: __main__:2020-08-13 22:26:57,338 - This is INFO message from log1 	log.py
+WARNING: __main__:2020-08-13 22:26:57,339 - This is WARNING message from log1 	log.py
+ERROR: __main__:2020-08-13 22:26:57,339 - This is ERROR message from log1 	log.py
+CRITICAL: __main__:2020-08-13 22:26:57,340 - This is CRITICAL message from log1 	log.py
+INFO: __main__:2020-08-13 22:26:57,341 - quadratic_formula(1, 0, -4) 	log.py
+DEBUG: __main__:2020-08-13 22:26:57,341 - # Compute the discriminant 	log.py
+DEBUG: __main__:2020-08-13 22:26:57,342 - #Compute the two roots 	log.py
+DEBUG: __main__:2020-08-13 22:26:57,342 - #Return the roots 	log.py

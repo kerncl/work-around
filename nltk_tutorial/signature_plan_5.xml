@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuarkSignaturePlan>
+	<Signatures type="Sample">
+		<Category name="Simple signatures" breakOnMatch="False">
+			<!-- start by checking if there where any errors in the log -->
+			<Signature name="error_in_log" signature="Error found in the log: {error}" >
+				<Conditions logicalOp="AND">
+					<Condition file="test.log" is_regex="True" cond=".*ERROR:\s*(?P{error}.*)\s*" /> 
+					<Condition file="test.log" is_regex="True" cond="^Failing tool name=(?P{tool_name}.*)" />
+				</Conditions>
+			</Signature>
+
+			<!-- If an error wasn't found, we try looking for a warning -->
+			<Signature name="warning_in_log" signature="Warning found in the log: {warn}" dependsOnNot="error_in_log">
+				<Conditions logicalOp="OR">
+					<Condition file="test.log" is_regex="True" cond=".*WARNING:\s*(?P{warn}.*)\s*" /> 
+					<Condition file="test.log" is_regex="True" cond=".*WARN:\s*(?P{warn}.*)\s*" /> 
+				</Conditions>
+			</Signature>
+
+			<!-- If an error was found, we want to look in the log of the specific tool that failed. -->
+			<Signature name="error_in_log" signature="Prime95 calculation error" dependsOn="{error_in_log.tool_name}==prime95">
+				<Conditions logicalOp="AND">
+					<Condition file="prime95.log" is_regex="True" cond=".*calculation error.*" /> 
+				</Conditions>
+			</Signature>
+
+			<Signature name="error_in_log" signature="Prime95 calculation error">
+				<Conditions logicalOp="AND">
+					<Condition file="prime95.log" is_regex="True" cond=".*calculation error.*" /> 
+				</Conditions>
+			</Signature>
+
+			<Signature name="hello_world" moduleName="hello_world_sig" />
+
+		</Category>
+	</Signatures>
+</QuarkSignaturePlan>

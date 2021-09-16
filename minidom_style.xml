@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<root name="root name">
+	<Section1 detail="other details 1" name="a">
+		<Parent name="parent 1"/>
+	</Section1>
+	<Section1 detail="other details 1" name="b">
+		<Parent name="parent 1"/>
+	</Section1>
+	<Section1 detail="other details 1" name="c">
+		<Parent name="parent 1"/>
+	</Section1>
+	<Section1 detail="other details 1" name="d">
+		<Parent name="parent 1"/>
+	</Section1>
+	<Section1 detail="other details 1" name="e">
+		<Parent name="parent 1"/>
+	</Section1>
+	<Section1 detail="other details 1" name="f">
+		<Parent name="parent 1"/>
+	</Section1>
+	<Section2 detail="other details 2" name="other details 2"/>
+</root>

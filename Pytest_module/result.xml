@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites> <!-- summaries there number of tests case and number of failure -->
+	<testsuite errors="0" failures="1" 
+		hostname="linnkern-mobl2" name="pytest" 
+		skipped="0" tests="4" time="0.067" 
+		timestamp="2020-09-30T17:20:37.296262">
+		<testcase classname="test_parametrize" 
+			file="test_parametrize.py" 
+			line="4" name="test_multiplication_11[1-11]" 
+			time="0.001"></testcase>
+		<testcase classname="test_parametrize" 
+			file="test_parametrize.py" line="4" 
+			name="test_multiplication_11[2-22]" 
+			time="0.001"></testcase>
+		<testcase classname="test_parametrize" 
+			file="test_parametrize.py" line="4" 
+			name="test_multiplication_11[3-35]" time="0.002">
+			<failure message="assert 33 == 35	<!-- details of the failed test code -->
+				+33
+				-35">num = 3, output = 35
+
+				@pytest.mark.parametrize(&quot;num, output&quot;, [(1, 11), (2, 22), (3, 35), (4, 44)])
+				def test_multiplication_11(num, output):
+				&gt;       assert 11 * num == output
+				E       assert 33 == 35
+				E         +33
+				E         -35
+	
+				test_parametrize.py:7: AssertionError</failure>
+		</testcase>
+		<testcase classname="test_parametrize" file="test_parametrize.py" 
+					line="4" name="test_multiplication_11[4-44]" time="0.002">
+		</testcase>
+		</testsuite>
+</testsuites>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encdoing="UTF-8"?>
+<metadata>
+<food>
+    <item name ="breakfast">Idly</item>
+    <price>$2.5</price>
+    <description>
+    Two idly's with chutney
+    </description>
+    <calories>553</calories>
+</food>
+<food>
+    <item name="breakfast">Kesari Bath</item>
+    <price>$1.95</price>
+    <description>
+    Sweet rava with saffron
+    </description>
+    <calories>950</calories>
+</food>
+</metadata>
