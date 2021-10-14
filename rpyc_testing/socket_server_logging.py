@@ -95,10 +95,11 @@ def main():
 
 if __name__ == '__main__':
     def handler(signum, frame):
-        print('Received: CTRL+C')
+        print('Received: CTRL+C\n Oh no ~~~')
+        print('!!! Bye Bye !!!!')
         print(f'signum: {signum}, frame:{dir(frame)}')
         LogRecordSocketReceiver.loop_flag.clear()
-        sys.exit(0)
+        exit(0)
 
     signal.signal(signal.SIGINT, handler)
     main()

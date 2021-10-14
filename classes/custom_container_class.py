@@ -33,13 +33,14 @@ class Config(UserDict):
     def __new__(cls, *args, **kwargs):  # singleton
         if not cls._instance:
             cls._instance = super().__new__(cls)
-            # cls._instance.data = deepcopy(_cfg_ref)
+            cls._instance.data = deepcopy(_cfg_ref)
             # for section, options in _cfg_ref.items():
             #     cls._instance.data[section] = Option(options)
         return cls._instance
 
     def __init__(self):
-        self.data = deepcopy(_cfg_ref)
+        # self.data = deepcopy(_cfg_ref)
+        pass
 
     @classmethod
     def parser(cls):
@@ -90,6 +91,8 @@ class Config(UserDict):
 if __name__ == '__main__':
     Config.parser()
     mycfg = Config()
+    mycfg1 = Config()
+    mycfg2 = Config()
     print()
     # config1 = Config()
     # config1['odict1']['idict11'] = 'abc'
